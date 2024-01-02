@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuckDuckGo Custom Search</title>
+</head>
+<body>
+    <!--
+        Both of these implementations use the fact that the search
+        engines allow using:
+
+            site:example.com 
+
+        syntax in their search to scope the search to a single 
+        domain or site URL
+
+        Tested with urls:
+            www.karllhughes.com
+            https://draft.dev/learn/
+    -->
+
+    <h1>DuckDuckGo Custom Search</h1>
+    <form action="https://duckduckgo.com/" method="get" target="_blank">
+        <input type="hidden" name="sites" value="www.karllhughes.com">
+        <input type="search" name="q" placeholder="Search KarlHughes.com">
+        <input type="submit" value="Search">
+    </form>
+
+    <h1>Google Custom Search</h1>
+    <form action="https://www.google.com/search" method="get" target="_blank">
+        <!-- Add other parameters for Google search -->
+        <input type="hidden" name="sitesearch" value="www.karllhughes.com">
+        <input type="text" name="q" placeholder="Search Stack Overflow on Google...">
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>
+
